@@ -7,7 +7,6 @@
 
 int main() {
     std::vector<std::unique_ptr<Entity>> party;
-    
     party.push_back(std::make_unique<Player>("Aria"));
     party.push_back(std::make_unique<Enemy>("Goblin", 12));
     party.push_back(std::make_unique<Player>("Bran"));
