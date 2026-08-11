@@ -1,0 +1,16 @@
+#include "Enemy.hpp"
+#include <iostream>
+
+Enemy::Enemy(std::string name, int hp, std::initializer_list<std::string> loot) 
+    : Entity(name), m_hp(hp), m_bag(name, loot) 
+{
+    std::cout << "+ Enemy     " << m_name << '\n';
+}
+
+Enemy::~Enemy() {
+    std::cout << "- Enemy     " << m_name << '\n';
+}
+
+std::string Enemy::describe() const {
+    return "Enemy " + m_name + " (hp " + std::to_string(m_hp) + ")";
+}
